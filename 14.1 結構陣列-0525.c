@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 	}
 	
 	for(i=0;i<50;i++){
-		printf("¾Ç¸¹¡G%d ¥­§¡¦¨ÁZ: %d ",student[i].id, student[i].ave) ;
+		printf("å­¸è™Ÿï¼š%d å¹³å‡æˆç¸¾: %d ",student[i].id, student[i].ave) ;
 		printf("\n");
 	}
 
@@ -33,7 +33,6 @@ int main(int argc, char *argv[]) {
 	for(i=0;i<50;i++){
 		sort[i] = i;
 	}
-	printf("%d\n",student[0].ave);
 	for(i=0;i<49;i++){
 		for(j=0;j<49;j++){
 			if(student[sort[j]].ave<student[sort[j+1]].ave) {
@@ -44,7 +43,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	for(i=0;i<50;i++){
-		printf("±Æ¦W:%d ¾Ç¸¹¡G%d ¥­§¡¦¨ÁZ: %d ", i+1, student[sort[i]].id, student[sort[i]].ave);
+		printf("æŽ’å:%d å­¸è™Ÿï¼š%d å¹³å‡æˆç¸¾: %d ", i+1, student[sort[i]].id, student[sort[i]].ave);
 		printf("\n");
 	}
 	return 0;
