@@ -10,37 +10,37 @@ int main(void) {
 	char ch = 'q';
 	char guess_ch;
 	srand(time(NULL));
-	printf("²q¼Æ¦r¹CÀ¸-¿é¤Jqµ²§ô¹CÀ¸\n");
+	printf("çŒœæ•¸å­—éŠæˆ²(0~9) -è¼¸å…¥qçµæŸéŠæˆ²-\n");
 	for(i=0;i<4;i++){
 		do{
-			ans[i] = rand()%10;      //ans ¨ú¶Ã¼Æ¦s°}¦C ; %9 : 0~8; %9+1 : 1~9
+			ans[i] = rand()%10;      //ans å–äº‚æ•¸å­˜é™£åˆ— ; %9 : 0~8; %9+1 : 1~9
 			for(j=0;j<i;j++){
-				if(ans[i] == ans[j]){ //§PÂ_¬O§_¦³­«½Æªº­È ¬O´N¸õ¥X°j°é 
+				if(ans[i] == ans[j]){ //åˆ¤æ–·æ˜¯å¦æœ‰é‡è¤‡çš„å€¼ æ˜¯å°±è·³å‡ºè¿´åœˆ 
 					//printf("\n%d %d\n", ans[i], ans[j]);
 					break;
 				}
 			}
-		}while(i != j);            //i=j¤~Â÷¶} 
+		}while(i != j);            //i=jæ‰é›¢é–‹ 
 	}         
 	/*for(i=0;i<4;i++){          
-		printf("%d", ans[i]);     //¦L¥Xµª®×
+		printf("%d", ans[i]);     //å°å‡ºç­”æ¡ˆ
 	} */ 
-	while(A != 4){                    //·íA¤£µ¥©ó4 Ä~Äò²q 
-		printf("½Ğ¿é¤J¥|­Ó¼Æ¦r:\n"); 
-		scanf("%d", &guess);          //¾ã¼Æ 
-		scanf("%c", &guess_ch);       //Âà¦r¤¸ 
-		if(guess_ch == ch)  break;    //¦pªG¿é¤JQ¸õ¥X°j°é
-		g[0] = guess/1000;            //±N²qªº¼Æ¦r¨Ì§Ç¦s¨ì°}¦C 
+	while(A != 4){                    //ç•¶Aä¸ç­‰æ–¼4 ç¹¼çºŒçŒœ 
+		printf("è«‹è¼¸å…¥å››å€‹æ•¸å­—:\n"); 
+		scanf("%d", &guess);          //æ•´æ•¸ 
+		scanf("%c", &guess_ch);       //è½‰å­—å…ƒ 
+		if(guess_ch == ch)  break;    //å¦‚æœè¼¸å…¥Qè·³å‡ºè¿´åœˆ
+		g[0] = guess/1000;            //å°‡çŒœçš„æ•¸å­—ä¾åºå­˜åˆ°é™£åˆ— 
 		g[1] = guess/100%10;
 		g[2] = guess/10%10;
 		g[3] = guess%10;
 		A=0, B=0;		
 		for(i=0;i<4;i++){
 			for(j=0;j<4;j++){
-				if((g[i] == ans[j]) && (i == j)){  //§PÂ_i=j¥B¦ì¸m¬Û¦P 
+				if((g[i] == ans[j]) && (i == j)){  //åˆ¤æ–·i=jä¸”ä½ç½®ç›¸åŒ 
 					A = A+1;
 				}		
-				if((g[i] == ans[j]) && (i != j)){  //§PÂ_i=j¦ı¦ì¸m¤£¬Û¦P
+				if((g[i] == ans[j]) && (i != j)){  //åˆ¤æ–·i=jä½†ä½ç½®ä¸ç›¸åŒ
 					B = B+1; 
 				}		
 			}
@@ -49,10 +49,10 @@ int main(void) {
 	}       
 	
 	if(A != 4){
-		printf("µ²§ô¹CÀ¸~\n¥¿½Tµª®× %d%d%d%d", ans[0], ans[1], ans[2], ans[3]);
+		printf("çµæŸéŠæˆ²~\næ­£ç¢ºç­”æ¡ˆ %d%d%d%d", ans[0], ans[1], ans[2], ans[3]);
 	}
 	else{
-		printf("\n®¥³ßµª¹ï!");
+		printf("\næ­å–œç­”å°!");
 	}
 	return 0;
 }
